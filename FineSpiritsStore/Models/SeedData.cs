@@ -19,7 +19,7 @@ namespace FineSpiritsStore.Models
                 context.Products.AddRange(
                     new Product
                     {
-                        Name = "Bombay Sapphire London Dry Gin",
+                        Name = "BomBay Sapphire London Dry Gin",
                         Category = "Gin",
                         Price = 22.99m
                         //Brand = "Bombay"

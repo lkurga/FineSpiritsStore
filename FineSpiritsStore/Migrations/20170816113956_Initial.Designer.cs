@@ -32,6 +32,12 @@ namespace FineSpiritsStore.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<string>("Brand");
+
+                    b.Property<string>("Country");
+
+                    b.Property<int>("Size");
+
                     b.Property<decimal>("Price");
 
                     b.HasKey("ProductID");

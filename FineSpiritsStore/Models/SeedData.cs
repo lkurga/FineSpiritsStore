@@ -25,54 +25,91 @@ namespace FineSpiritsStore.Models
                         //Brand = "Bombay"
 
                     },
-                    new Product
+         new Product
                     {
-                        Name = "Aviation Gin",                 
+                        Name = "Bombay Sapphire London Dry",
                         Category = "Gin",
-                        Price = 34.99m
-                    },
-                    new Product
-                    {
-                        Name = "Nikka Coffey Gin",
-                        Category = "Gin",
-                        Price = 54.99m
+                        Price = 21.99m,
+                        Brand = "Bombay",
+                        Country = "England",
+                        Size = 750
+                      
+                        
 
                     },
                     new Product
                     {
-                        Name = "Crystal Head Vodka",
+                        Name = "Aviation",                 
+                        Category = "Gin",
+                        Price = 34.99m,
+                        Brand = "Aviation",
+                        Country="USA",
+                        Size = 750
+
+                    },
+                    new Product
+                    {
+                        Name = "Nikka Coffey",
+                        Category = "Gin",
+                        Price = 54.99m,
+                        Brand = "Nikka",
+                        Country = "Japan",
+                        Size = 750
+
+                    },
+                    new Product
+                    {
+                        Name = "Crystal Head",
                         Category = "Vodka",
-                        Price = 59.99m
+                        Price = 59.99m,
+                        Brand= "Canada",
+                        Country = "Canada",
+                        Size = 750
                     },
                     new Product
                     {
-                        Name = "Grey Goose Vodka",
+                        Name = "Grey Goose",
                         Category = "Vodka",
-                        Price = 19.99m
+                        Price = 19.99m,
+                        Brand = "Grey Goose",
+                        Country = "France",
+                        Size = 375
                     },
                     new Product
                     {
-                        Name = "Tito's Handmade Vodka",
+                        Name = "Tito's Handmade",
                         Category = "Vodka",
-                        Price = 18.99m
+                        Price = 18.99m,
+                        Brand = "Tito's",
+                        Country ="USA" ,
+                        Size = 750
                     },
                     new Product
                     {
-                        Name = "Antigua Porteno 15 Yr Rum",
+                        Name = "Antigua Porteno 15 Yr",
                         Category = "Rum",
-                        Price = 49.99m
+                        Price = 49.99m,
+                        Brand = "Antigua",
+                        Country="Columbia",
+                        Size = 750
                     },
                     new Product
                     {
-                        Name = "Kraken Black Spiced Rum",
+                        Name = "Kraken Black Spiced",
                         Category = "Rum",
-                        Price = 13.99m
+                        Price = 13.99m,
+                        Brand = "Kraken",
+                        Country="USA",
+                        Size = 375
                     },
                     new Product
                     {
-                        Name = "Malibu Rum Coconut",
+                        Name = "Malibu Coconut",
                         Category = "Rum",
-                        Price = 13.99m
+                        Price = 13.99m,
+                        Brand = "Malibu",
+                        Country="Carribean",
+                        Size = 750
                     }
                 );
                 context.SaveChanges();

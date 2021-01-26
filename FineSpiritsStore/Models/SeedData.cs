@@ -20,7 +20,7 @@ namespace FineSpiritsStore.Models
    
          new Product
                     {
-                        Name = "Jason Sapphire London Dry",
+                        Name = "Bombay Sapphire London Dry",
                         Category = "Gin",
                         Price = 21.99m,
                         Brand = "Bombay",

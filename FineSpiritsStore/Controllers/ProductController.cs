@@ -8,7 +8,7 @@ namespace FineSpiritsStore.Controllers
     public class ProductController : Controller
     {
         private IProductRepository repository;
-        public int PageSize = 4;
+        public int PageSize = 3;
 
         public ProductController(IProductRepository repo)
         {
@@ -19,7 +19,7 @@ namespace FineSpiritsStore.Controllers
             => View(new ProductsListViewModel
             {
                 Products = repository.Products
-                    .OrderBy(p => p.ProductID)
+                    .OrderBy(p => p.Category)
                     .Skip((productPage - 1) * PageSize)
                     .Take(PageSize),
                 PagingInfo = new PagingInfo

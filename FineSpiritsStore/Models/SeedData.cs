@@ -103,6 +103,78 @@ namespace FineSpiritsStore.Models
                         Brand = "Malibu",
                         Country="Carribean",
                         Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Johnnie Walker Scotch Blue"
+                        Category = "Whiskey"
+                        Brand = "Johnnie Walker"
+                        Country = "Scotland"
+                        Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Crown Royal"
+                        Category = "Whiskey"
+                        Brand = "Crown Royal"
+                        Country = "Canada"
+                        Size = 375
+                    },
+                    new Product
+                    {
+                        Name = "Jameson Irish"
+                        Category = "Whiskey"
+                        Brand = "Jameson Irish"
+                        Country = "Ireland"
+                        Size =
+                    },
+                    new Product
+                    {
+                        Name = "Don Julio 1942 Anejo"
+                        Category = "Tequila"
+                        Brand = "Don Julio"
+                        Country = "Mexico"
+                        Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Patron Silver"
+                        Category = "Tequila"
+                        Brand = "Patron"
+                        Country = "Mexico"
+                        Size = 375
+                    },
+                    new Product
+                    {
+                        Name = "Patron Silver"
+                        Category = "Tequila"
+                        Brand = "Patron"
+                        Country = "Mexico"
+                        Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Remy Martin Cognac XO Excellence"
+                        Category = "Brandy"
+                        Brand = "Remy Martin"
+                        Country = "France"
+                        Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Remy Martin VSOP"
+                        Category = "Brandy"
+                        Brand = "Remy Martin"
+                        Country = France"
+                        Size = 375
+                    },
+                    new Product
+                    {
+                        Name = "Caravedo Mosto Verde Pisco"
+                        Category = "Brandy"
+                        Brand = "Caravedo"
+                        Country = "Peru"
+                        Size = 750
                     }
                 );
                 context.SaveChanges();

@@ -103,6 +103,87 @@ namespace FineSpiritsStore.Models
                         Brand = "Malibu",
                         Country="Carribean",
                         Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Johnnie Walker Scotch Blue",
+                        Category = "Whiskey",
+                        Price = 299.99m,
+                        Brand = "Johnnie Walker",
+                        Country = "Scotland",
+                        Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Crown Royal",
+                        Category = "Whiskey",
+                        Price = 17.99m,
+                        Brand = "Crown Royal",
+                        Country = "Canada",
+                        Size = 375
+                    },
+                    new Product
+                    {
+                        Name = "Jameson Irish",
+                        Category = "Whiskey",
+                        Price = 24.99m,
+                        Brand = "Jameson Irish",
+                        Country = "Ireland",
+                        Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Don Julio 1942 Anejo",
+                        Category = "Tequila",
+                        Price = 184.99m,
+                        Brand = "Don Julio",
+                        Country = "Mexico",
+                        Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Patron Silver",
+                        Category = "Tequila",
+                        Price = 32.99m,
+                        Brand = "Patron",
+                        Country = "Mexico",
+                        Size = 375
+                    },
+                    new Product
+                    {
+                        Name = "Patron Silver",
+                        Category = "Tequila",
+                        Price = 49.99m,
+                        Brand = "Patron",
+                        Country = "Mexico",
+                        Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Remy Martin Cognac XO Excellence",
+                        Category = "Brandy",
+                        Price = 207.99m,
+                        Brand = "Remy Martin",
+                        Country = "France",
+                        Size = 750
+                    },
+                    new Product
+                    {
+                        Name = "Remy Martin VSOP",
+                        Category = "Brandy",
+                        Price = 26.99m,
+                        Brand = "Remy Martin",
+                        Country = "France",
+                        Size = 375
+                    },
+                    new Product
+                    {
+                        Name = "Caravedo Mosto Verde Pisco",
+                        Category = "Brandy",
+                        Price = 49.99m,
+                        Brand = "Caravedo",
+                        Country = "Peru",
+                        Size = 750
                     }
                 );
                 context.SaveChanges();

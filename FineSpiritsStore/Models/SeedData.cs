@@ -19,7 +19,7 @@ namespace FineSpiritsStore.Models
                 context.Products.AddRange(
                     //testing change on website
                     //testing change on Visual studio /
-                    //testing changes on visual studio 2
+                    //testing changes on visual studio 2/
    
          new Product
                     {

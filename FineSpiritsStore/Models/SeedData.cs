@@ -20,6 +20,7 @@ namespace FineSpiritsStore.Models
    
          new Product
                     {
+                        //testing
                         Name = "Bombay Sapphire London Dry",
                         Category = "Gin",
                         Price = 21.99m,

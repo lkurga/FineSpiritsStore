@@ -10,8 +10,16 @@
 </head>
 <body>
     <div class="navbar navbar-inverse bg-inverse" role="navigation">
-        <a class="navbar-brand" href="#">FINE SPIRITS STORE</a>
-    </div>
+        <a class="navbar-brand" href="#">
+            FINE SPIRITS STORE
+        </a>
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <a asp-action="index" asp-controller="blogs">Blog</a> 
+                <a asp-action="List" asp-controller="Product">Product</a>
+            </ul>
+       
+        
+        </div>
     <div class="row m-1 p-1">
         <div id="categories" class="col-3">
             @await Component.InvokeAsync("NavigationMenu")

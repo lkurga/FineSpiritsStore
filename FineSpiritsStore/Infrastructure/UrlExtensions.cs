@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace SportsStore.Infrastructure {
+namespace FineSpiritsStore.Infrastructure {
 
     public static class UrlExtensions {
 

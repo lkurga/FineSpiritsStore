@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="~/css/clean-blog.min.css" rel="stylesheet">
+    <link rel="stylesheet" asp-href-include="/lib/fontawesome/css/*.css" />
 
 </head>
 
@@ -46,6 +47,9 @@
                     </li>
                     <li class="nav-item">
                         <a asp-action="List" asp-controller="Product">Product</a>
+                    </li>
+                    <li class="col-4 text-right">
+                        @await Component.InvokeAsync("CartSummary")
                     </li>
                 </ul>
 

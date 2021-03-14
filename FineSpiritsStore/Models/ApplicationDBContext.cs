@@ -13,6 +13,8 @@ namespace FineSpiritsStore.Models
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Order> Orders { get; set; }
+
     }
 
     public class ApplicationDbContextFactory

@@ -27,6 +27,7 @@ namespace FineSpiritsStore.Controllers
             return RedirectToAction(nameof(List));
         }
         public ViewResult Checkout() => View(new Order());
+
         [HttpPost]
         public IActionResult Checkout(Order order)
         {

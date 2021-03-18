@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace FineSpiritsStore.Models
 {
-
+      //testing on website
     public class Product
     {
         public int ProductID { get; set; }

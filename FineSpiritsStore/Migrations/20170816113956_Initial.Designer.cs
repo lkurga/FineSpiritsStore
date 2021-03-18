@@ -31,6 +31,12 @@ namespace FineSpiritsStore.Migrations
                     b.Property<string>("Description");
 
                     b.Property<string>("Name");
+                    
+                    b.Property<string>("Brand");
+
+                    b.Property<string>("Country");
+
+                    b.Property<int>("Size");
 
                     b.Property<string>("Brand");
 

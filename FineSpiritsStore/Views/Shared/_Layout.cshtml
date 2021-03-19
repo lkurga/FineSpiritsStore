@@ -39,16 +39,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a asp-action="List" asp-controller="Product">Home</a>
-
+                        <a  asp-route-category="">Home</a>
                     </li>
-                 
+
                     <li class="nav-item">
                         <a asp-action="index" asp-controller="blogs">Blog</a>
                     </li>
-                    <li class="nav-item">
-                        <a asp-action="List" asp-controller="Product">Product</a>
-                    </li>
+
                     <li class="col-4 text-right">
                         @await Component.InvokeAsync("CartSummary")
                     </li>

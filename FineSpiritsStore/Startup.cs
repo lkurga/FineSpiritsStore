@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using FineSpiritsStore.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace FineSpiritsStore
 {
@@ -25,7 +26,19 @@ namespace FineSpiritsStore
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration["Data:SportStoreProducts:ConnectionString"]));
+                    Configuration["Data:FineSpiritStore:ConnectionString"]));
+
+
+            services.AddDbContext<AppIdentityDbContext>(options =>
+ options.UseSqlServer(
+ Configuration["Data:FineSpiritIdentity:ConnectionString"]));
+            services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<AppIdentityDbContext>()
+            .AddDefaultTokenProviders();
+
+
+
+
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddTransient<IBlogRepository, EFBlogRepository>();
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
@@ -34,6 +47,7 @@ namespace FineSpiritsStore
             services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();
+
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -42,6 +56,7 @@ namespace FineSpiritsStore
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
+            app.UseAuthentication();
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: null,
@@ -69,6 +84,7 @@ namespace FineSpiritsStore
                 routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
             });
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

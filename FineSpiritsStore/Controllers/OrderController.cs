@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FineSpiritsStore.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 namespace FineSpiritsStore.Controllers
 {
     public class OrderController : Controller
@@ -12,9 +13,10 @@ namespace FineSpiritsStore.Controllers
             repository = repoService;
             cart = cartService;
         }
-        public ViewResult List() =>
- View(repository.Orders.Where(o => !o.Shipped));
+        [Authorize]
+        public ViewResult List() => View(repository.Orders.Where(o => !o.Shipped));
         [HttpPost]
+        [Authorize]
         public IActionResult MarkShipped(int orderID)
         {
             Order order = repository.Orders

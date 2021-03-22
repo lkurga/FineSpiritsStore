@@ -39,7 +39,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a asp-action="List" asp-controller="Product">Home</a>
+                        <a asp-action="List" asp-controller="Product">Browse</a>
 
                     </li>
                     <li class="nav-item">
@@ -70,6 +70,10 @@
                                 @await Component.InvokeAsync("NavigationMenu")
                             </div>
                             <div class="col-9" )>
+                                @if (IsSectionDefined("scripts"))
+                                {
+                                    RenderSection("scripts");
+                                }
                                 @RenderBody()
                             </div>
                         </div>  </div>

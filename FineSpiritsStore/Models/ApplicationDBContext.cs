@@ -17,6 +17,7 @@ namespace FineSpiritsStore.Models
 
     }
 
+    
     public class ApplicationDbContextFactory
             : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
@@ -25,4 +26,5 @@ namespace FineSpiritsStore.Models
             Program.BuildWebHost(args).Services
                 .GetRequiredService<ApplicationDbContext>();
     }
+    
 }

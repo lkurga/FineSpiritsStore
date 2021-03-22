@@ -1,8 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FineSpiritsStore.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+
+
+
 namespace FineSpiritsStore.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IProductRepository repository;
@@ -15,6 +20,8 @@ namespace FineSpiritsStore.Controllers
         public ViewResult Edit(int productId) =>
  View(repository.Products
  .FirstOrDefault(p => p.ProductID == productId));
+
+
 
         [HttpPost]
         public IActionResult Edit(Product product)
@@ -43,6 +50,12 @@ namespace FineSpiritsStore.Controllers
                 TempData["message"] = $"{deletedProduct.Name} was deleted";
             }
             return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public IActionResult SeedDatabase()
+        {
+            SeedData.EnsurePopulated(HttpContext.RequestServices);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

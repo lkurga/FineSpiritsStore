@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace FineSpiritsStore.Models
 {
     public interface IBlogRepository
@@ -14,3 +15,4 @@ namespace FineSpiritsStore.Models
         }
    
 }
+

@@ -51,8 +51,8 @@ namespace FineSpiritsStore
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-           //app.UseDeveloperExceptionPage();
-          // app.UseStatusCodePages();
+           app.UseDeveloperExceptionPage();
+           app.UseStatusCodePages();
 
             if (env.IsDevelopment())
             {

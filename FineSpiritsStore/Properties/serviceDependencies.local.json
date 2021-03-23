@@ -1,16 +1,17 @@
 {
   "dependencies": {
     "secrets1": {
-      "type": "secrets.user"
-    },
-    "mssql1": {
-      "type": "mssql.local",
-      "connectionId": "Data/FineSpiritStoreIdentity/ConnectionString",
-      "secretStore": "LocalSecretsFile"
+      "type": "secrets.user",
+      "connectionId": "ASPNETCORE_HOSTINGSTARTUP__KEYVAULT__CONFIGURATIONVAULT"
     },
     "mssql2": {
       "type": "mssql.local",
       "connectionId": "Data/FineSpiritStoreProducts/ConnectionString",
+      "secretStore": "LocalSecretsFile"
+    },
+    "mssql1": {
+      "type": "mssql.local",
+      "connectionId": "Data/FineSpiritStoreIdentity/ConnectionString",
       "secretStore": "LocalSecretsFile"
     }
   }

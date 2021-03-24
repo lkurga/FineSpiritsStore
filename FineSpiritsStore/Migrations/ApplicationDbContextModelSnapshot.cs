@@ -98,13 +98,16 @@ namespace FineSpiritsStore.Migrations
 
                     b.Property<string>("Brand");
 
-                    b.Property<string>("Category");
+                    b.Property<string>("Category")
+                        .IsRequired();
 
                     b.Property<string>("Country");
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .IsRequired();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<decimal>("Price");
                     

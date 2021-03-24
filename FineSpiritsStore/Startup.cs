@@ -24,14 +24,14 @@ namespace FineSpiritsStore
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration["Data:FineSpiritStore:ConnectionString"]));
 
 
-            services.AddDbContext<AppIdentityDbContext>(options =>
- options.UseSqlServer(
- Configuration["Data:FineSpiritIdentity:ConnectionString"]));
+      
+
+            services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(Configuration["Data:FineSpiritStoreProducts:ConnectionString"]));
+
+
+            services.AddDbContext<AppIdentityDbContext>(options =>options.UseSqlServer(Configuration["Data:FineSpiritStoreIdentity:ConnectionString"]));
             services.AddIdentity<IdentityUser, IdentityRole>()
             .AddEntityFrameworkStores<AppIdentityDbContext>()
             .AddDefaultTokenProviders();
@@ -65,8 +65,6 @@ namespace FineSpiritsStore
                 app.UseExceptionHandler("/Error");
             }
 
-            app.UseDeveloperExceptionPage();
-            app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
             app.UseAuthentication();
@@ -96,8 +94,8 @@ namespace FineSpiritsStore
 
                 routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
             });
-            SeedData.EnsurePopulated(app);
-            IdentitySeedData.EnsurePopulated(app);
+            //SeedData.EnsurePopulated(app);
+            //IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

@@ -11,8 +11,8 @@ using System;
 namespace FineSpiritsStore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210314052342_ShippedOrders")]
-    partial class ShippedOrders
+    [Migration("20210322064602_Initital")]
+    partial class Initital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -99,13 +99,16 @@ namespace FineSpiritsStore.Migrations
 
                     b.Property<string>("Brand");
 
-                    b.Property<string>("Category");
+                    b.Property<string>("Category")
+                        .IsRequired();
 
                     b.Property<string>("Country");
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .IsRequired();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<decimal>("Price");
 

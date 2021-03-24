@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using FineSpiritsStore.Models.ViewModels;
+using FineSpiritsStore.Models;
 namespace FineSpiritsStore.Controllers
 {
     [Authorize]
@@ -15,7 +16,9 @@ namespace FineSpiritsStore.Controllers
         {
             userManager = userMgr;
             signInManager = signInMgr;
+            IdentitySeedData.EnsurePopulated(userMgr).Wait();
         }
+
         [AllowAnonymous]
         public ViewResult Login(string returnUrl)
         {
@@ -43,6 +46,7 @@ namespace FineSpiritsStore.Controllers
                     }
                 }
             }
+   
         ModelState.AddModelError("", "Invalid name or password");
             return View(loginModel);
         }

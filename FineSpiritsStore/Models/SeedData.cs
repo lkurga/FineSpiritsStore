@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace FineSpiritsStore.Models
 {
@@ -9,11 +10,11 @@ namespace FineSpiritsStore.Models
     public static class SeedData
     {
 
-        public static void EnsurePopulated(IApplicationBuilder app)
+        public static void EnsurePopulated(IServiceProvider services)
         {
-            ApplicationDbContext context = app.ApplicationServices
-                .GetRequiredService<ApplicationDbContext>();
-            context.Database.Migrate();
+            ApplicationDbContext context =
+            services.GetRequiredService<ApplicationDbContext>();
+            //context.Database.Migrate();
             if (!context.Products.Any())
             {
                 context.Products.AddRange(
@@ -21,7 +22,7 @@ namespace FineSpiritsStore.Models
                     //testing change on Visual studio /
                     //testing changes on visual studio 2/
    
-         new Product
+                    new Product
                     {
                         //testing
                         Name = "Bombay Sapphire London Dry",
@@ -214,6 +215,11 @@ namespace FineSpiritsStore.Models
                 );
                 context.SaveChanges();
             }
+          
+            
         }
+          
+            
     }
+
 }

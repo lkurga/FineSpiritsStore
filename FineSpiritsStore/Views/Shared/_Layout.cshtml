@@ -39,13 +39,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a  asp-route-category="">Home</a>
+                        <a asp-route-category="">Home</a>
+
                     </li>
 
                     <li class="nav-item">
                         <a asp-action="index" asp-controller="blogs">Blog</a>
                     </li>
-
                     <li class="col-4 text-right">
                         @await Component.InvokeAsync("CartSummary")
                     </li>
@@ -56,32 +56,29 @@
     </nav>
 
     <!-- Page Header -->
-   
-
-        <header class="masthead" style="background-image: url('img/home-bg.jpg')">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10 mx-auto">
-                        <div class="site-heading">
-
-                            <div class="row m-1 p-1">
-                                <div id="categories" class="col-3">
-                                    @await Component.InvokeAsync("NavigationMenu")
-                                </div>
-                                <div class="col-9" )>
-                                    @if (IsSectionDefined("scripts"))
-                                    {
-                                        RenderSection("scripts");
-                                    }
-                                    @RenderBody()
-                                </div>
+    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+    
+                        <div class="row m-1 p-1">
+                            <div id="categories" class="col-3">
+                                @await Component.InvokeAsync("NavigationMenu")
                             </div>
-                        </div>
-                    </div>
+                            <div class="col-9" )>
+                                @if (IsSectionDefined("scripts"))
+                                {
+                                    RenderSection("scripts");
+                                }
+                                @RenderBody()
+                            </div>
+                        </div>  </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
   
 
@@ -93,7 +90,7 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <ul class="list-inline text-center">
                         <li class="list-inline-item">
-                            <a href="https://www.twitter.com">
+                            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
                                 <span class="fa-stack fa-lg">
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -101,7 +98,7 @@
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://www.facebook.com">
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                                 <span class="fa-stack fa-lg">
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -109,7 +106,7 @@
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://www.github.com">
+                            <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
                                 <span class="fa-stack fa-lg">
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>

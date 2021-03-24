@@ -13,7 +13,7 @@
 
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -66,9 +66,9 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="post-heading">
                         <p>
-                            <a asp-action="Create">Create New</a>
+                            <a class="p-3 mb-2 bg-secondary text-white" asp-action="Create">Create New</a>
                         </p>
-                        <table class="table">
+                        <table class="table table-bordered table-dark table-hover table-responsive-sm p-3 mb-2 bg-secondary text-white">
                             <thead>
                             <tr>
                                 <th>
@@ -97,9 +97,9 @@
                                         @Html.DisplayFor(modelItem => item.BlogCategory)
                                     </td>
                                     <td>
-                                        <a asp-action="Edit" asp-route-id="@item.BlogID">Edit</a> |
-                                        <a asp-action="Details" asp-route-id="@item.BlogID">Details</a> |
-                                        <a asp-action="Delete" asp-route-id="@item.BlogID">Delete</a>
+                                        <a class="text-white" asp-action="Edit" asp-route-id="@item.BlogID">Edit</a> |
+                                        <a class="text-white" asp-action="Details" asp-route-id="@item.BlogID">Details</a> |
+                                        <a class="text-white" asp-action="Delete" asp-route-id="@item.BlogID">Delete</a>
                                     </td>
                                 </tr>
                             }

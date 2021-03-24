@@ -1,7 +1,7 @@
 ﻿@model CartIndexViewModel
 
 <h2>Your cart</h2>
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-dark table-hover table-responsive-sm p-3 mb-2 bg-secondary text-white"">
     <thead>
         <tr>
             <th>Quantity</th>
@@ -13,7 +13,8 @@
     <tbody>
         @foreach (var line in Model.Cart.Lines) {
         <tr>
-            <td class="text-center">@line.Quantity</td>
+            <td class="text-center">@line.Quantity </td>
+            
             <td class="text-left">@line.Product.Name</td>
             <td class="text-right">@line.Product.Price.ToString("c")</td>
             <td class="text-right">

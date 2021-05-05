@@ -10,7 +10,7 @@ using FineSpiritsStore.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-
+using UrlsAndRoutes.Infrastructure;
 
 namespace FineSpiritsStore
 {
@@ -69,6 +69,18 @@ namespace FineSpiritsStore
             app.UseSession();
             app.UseAuthentication();
             app.UseMvc(routes => {
+
+
+
+
+
+                routes.MapRoute(
+                name: null,
+                template: "{area:exists}/{controller=Home}/{action=Index}");
+
+
+
+
                 routes.MapRoute(
                     name: null,
                     template: "{category}/Page{productPage:int}",
